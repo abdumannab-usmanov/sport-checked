@@ -1,0 +1,111 @@
+*{
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+
+
+.sport{
+  width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sport__title{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sport__form{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  width: 200px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.sport__label{
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.sport__input:focus ~ .sport__controller{
+  box-shadow:  6px 2px 16px 0px rgba(136, 165, 191, 0.48),
+  -6px -2px 16px 0px rgba(255, 255, 255, 0.8);
+}
+
+.sport__controller{
+  position: absolute;
+  right: 206px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 2px solid black;
+  border-radius: 5px; 
+}
+
+.sport__input:checked ~ .sport__controller{
+  background-image: url("../img/table-tennis.png");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.sport__input:checked ~ .sport__controller--second{
+  background-image: url("../img/basketball-ball.png");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.sport__input:disabled ~ .sport__controller--second{
+  border: 1px solid #ccc;
+  opacity: 0.4
+}
+
+.sport__input:checked ~ .sport__controller--third{
+  background-image: url("../img/volleyball-ball.png");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.sport__input:checked ~ .sport__controller--fourth{
+  background-image: url("../img/hockey-puck.png");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.sport__input:disabled ~ .sport__controller--fourth{
+  border: 1px solid #ccc;
+  opacity: 0.4
+}
+
+
+
+input:disabled ~ .sport__title{
+  color: #ccc;
+  opacity: 0.4;
+}
+
+  
+
+  
+  
+  
